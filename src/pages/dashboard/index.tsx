@@ -5,7 +5,7 @@ import { Layout } from "@/components/Layout";
 export default function Dashboard() {
   return (
     <Layout containerClassName="grid gap-y-3">
-      <Calendar navCard />
+      <Calendar onDateSelect={(date: Date) =>{}} navCard />
       <Chart />
       <Achievements />
       <Scoring />

@@ -8,26 +8,34 @@ type ValuePiece = Date | null;
 
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
-function tileContent({ date, view }) {
+type DateParameterType = {
+  date: Date;
+  view: string; // You might need to adjust the type of 'view' as well
+};
+
+function tileContent({ date, view }: DateParameterType) {
   // Add class to tiles in month view only
 
-  const dates = localStorage.getItem("calendarData");
-  if (dates == null) return;
-  const storedDates = JSON.parse(dates as string);
+  if (typeof window !== "undefined" && window.localStorage) {
+    const dates = localStorage.getItem("calendarData");
+    if (dates == null) return;
+    const storedDates = JSON.parse(dates as string);
 
-  if (view === "month") {
-    const dddd = formatDate(date);
-    // Check if a date React-Calendar wants to check is on the list of dates to add class to
-    const count: number = storedDates.dates.filter((val) => val === dddd).length;
-
-    return "•".repeat(count);
+    if (view === "month") {
+      const dddd = formatDate(date);
+      const count: number = storedDates.dates.filter((val: string) => val === dddd).length;
+      return <div style={{ position: "absolute"}}>
+        <br/>
+        {"•".repeat(count)}
+      </div>;
+    }
   }
 }
 
 export function Calendar(props: { className?: string; navCard?: boolean; onDateSelect: any }) {
-  const [selectedDate, setSelectedDate] = useState<Value>(new Date());
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
-  const handleDateChange = (date: Date) => {
+  const handleDateChange = (date: any) => {
     setSelectedDate(date);
     props.onDateSelect(date); // Notify the parent component about the selected date
   };
@@ -39,7 +47,7 @@ export function Calendar(props: { className?: string; navCard?: boolean; onDateS
           maxDate={new Date()}
           onChange={handleDateChange}
           value={selectedDate}
-          tileContent={({ date, view }) => tileContent({ date, view })}
+          tileContent={({ date, view }: DateParameterType) => tileContent({ date, view })}
         />
         {props.navCard && <button className="btn btn-primary btn-block">Open Calendar</button>}
       </div>

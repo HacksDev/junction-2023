@@ -48,7 +48,7 @@ const calendarReducer = (state: CalendarState, action: CalendarAction): Calendar
 };
 
 // @ts-ignore
-export const CalendarProvider: React.FC = ({ children }) => {
+export const CalendarProvider = ({ children }) => {
   const [state, dispatch] = useReducer(calendarReducer, initialState);
 
   useEffect(() => {
