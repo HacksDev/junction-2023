@@ -1,15 +1,22 @@
 import { Layout } from "@/components/Layout";
 import Link from "next/link";
 import { useCallback } from "react";
+import { useState } from "react";
 
 export default function Profile() {
+  const [checked, setChecked] = useState(false);
+  const buttonStyle = {
+    opacity: checked ? 1 : 0.5,
+  };
+
   const handleShareClick = useCallback(() => {
+    console.log("trying to share");
     try {
       if (navigator.share) {
         navigator
           .share({
             title: "HealthPace",
-            text: "HelthPace writes article about my chronical pain. I want to share it with you",
+            text: "HealthPace writes article about my chronical pain. I want to share it with you",
             url: "https://junction2023.hacksdev.site/profile/article/2f825b9a-371e-425c-91d7-fd51b6d3352c",
           })
           .then(() => console.log("Successful share"))
@@ -21,25 +28,6 @@ export default function Profile() {
   }, []);
   return (
     <Layout containerClassName="grid gap-y-3">
-      <div className="flex items-center justify-between">
-        <h1 className="text-xl font-medium my-9">My illness questionnaire</h1>
-        <button onClick={handleShareClick} className="pl-5">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15"
-            />
-          </svg>
-        </button>
-      </div>
       <strong>Understanding Ankylosing Spondylitis: A Guide for Friends and Family</strong>
       Hey there! We wanted to take a moment to talk about our buddy Mark. Mark is dealing with a condition called
       Ankylosing Spondylitis (AS), and we thought it&apos;s crucial for everyone to understand what he&apos;s going
@@ -80,6 +68,24 @@ export default function Profile() {
       Living with Ankylosing Spondylitis is no walk in the park, but with the right mix of support, understanding, and a
       sprinkle of joy, individuals like Mark can continue enjoying life&apos;s little pleasures. Let&apos;s stand
       together, be there for Mark, and show AS that it&apos;s not the boss of him!
+      <div className="form-control py-2">
+        <label className="cursor-pointer label">
+          <input type="checkbox" checked={checked} onChange={() => setChecked((prev) => !prev)} className="checkbox" />
+          <span className="label-text pl-2 font-medium leading-none">
+            I want to share this information with my loved ones
+          </span>
+        </label>
+      </div>
+      <div className="">
+        <button
+          className="btn btn-primary btn-block"
+          onClick={handleShareClick}
+          disabled={!checked}
+          style={buttonStyle}
+        >
+          Share article with friends
+        </button>
+      </div>
     </Layout>
   );
 }

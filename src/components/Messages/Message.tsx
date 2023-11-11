@@ -7,7 +7,7 @@ const Message = (props: { message: MessageData }) => {
       <div className={`chat ${message.userMessage === true ? "chat-end" : "chat-start"}`}>
         <div className="chat-image avatar">
           <div className="w-10 rounded-full">
-            <img src={message.userMessage === true ? "images/portrait.jpg" : "images/red_raccoon_box1.jpg"} />
+            <img src={message.userMessage === true ? "/images/portrait.jpg" : "/images/red_raccoon_box1.jpg"} />
           </div>
         </div>
         <div className="chat-header">{message.userMessage === true ? "You" : "Healther"}</div>
