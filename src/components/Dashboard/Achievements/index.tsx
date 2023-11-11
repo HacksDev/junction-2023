@@ -12,7 +12,7 @@ export function Achievements(props: { className?: string }) {
         </div>
         <div className="grid grid-cols-[1fr_auto]">
           <div>
-            <img src="/images/achivement_1.png" style={{ maxHeight: 100, minWidth: 100 }}></img>
+            <img src="/images/achive_1.png" style={{ maxHeight: 100, minWidth: 100 }}></img>
           </div>
           <div className="pl-5">
             <p className="text-md leading-none mb-3">
