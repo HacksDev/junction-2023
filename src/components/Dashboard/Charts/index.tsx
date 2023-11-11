@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import {
   CategoryScale,
+  ChartData,
   Chart as ChartJS,
   Legend,
   LinearScale,
@@ -37,7 +38,7 @@ const labels = ["January", "February", "March", "April", "May", "June"];
 const values = [400, 320, 300, 330, 270, 180];
 const values2 = [100, 120, 130, 100, 100, 160];
 
-export const data = {
+export const data: ChartData<"line"> = {
   labels,
   datasets: [
     {
@@ -62,7 +63,7 @@ export const data = {
 export function Chart(props: { className?: string }) {
   return (
     <section className={classNames("card", props.className)}>
-      <Line className="card-body" options={options} data={data as any} />
+      <Line className="card-body" options={options} data={data} />
     </section>
   );
 }
