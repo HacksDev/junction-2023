@@ -6,7 +6,6 @@ const SendMessage = (props: { onNewMessage: (message: String, userMessage: Boole
   const [number, setNumber] = useState<number>(0);
   const handleSendMessage = async (e: any) => {
     e.preventDefault();
-    console.log(value);
     props.onNewMessage(value, true);
     const anwer_messages: String[] = [
       'Thank you for your warm wishes! You just made someone a bit happier. Michael from Salzburg wrote a message to you too: "Have a nice day! Smile more!',
