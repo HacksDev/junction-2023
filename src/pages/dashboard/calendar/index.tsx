@@ -9,22 +9,21 @@ const Record = dynamic(() => import("@/components/Dashboard/Record"), {
 });
 
 export default function CalendarEvents() {
-    const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
-    const handleDateSelect = (date: Date) => {
-        setSelectedDate(date);
-    };
+  const handleDateSelect = (date: Date) => {
+    setSelectedDate(date);
+  };
 
-
-    return (
+  return (
     <Layout containerClassName="grid gap-y-3 pb-28">
       <h1 className="text-xl font-medium my-3 ml-4">Calendar</h1>
-      <Calendar onDateSelect={handleDateSelect}/>
+      <Calendar onDateSelect={handleDateSelect} />
       <Record />
       <Record />
       <Record />
       <Link
-          href={{ pathname: '/dashboard/calendar/edit', query: { selectedDate: selectedDate.toISOString()  } }}
+        href={{ pathname: "/dashboard/calendar/edit", query: { selectedDate: selectedDate.toISOString() } }}
         className="fixed shadow-2xl bottom-24 right-5 btn btn-lg btn-circle btn-primary"
       >
         <svg
