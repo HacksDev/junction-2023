@@ -10,6 +10,7 @@
     "lint:fix": "eslint src/** --fix"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.7",
     "chart.js": "^4.4.0",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.10",

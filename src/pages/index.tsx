@@ -16,7 +16,7 @@ export default function Home() {
         type="text"
         placeholder="HLTH1239MIRIAMCOLETTE"
         value="HLTH1239MIRIAMCOLETTE"
-        className="input input-ghost w-full"
+        className="input input-ghost w-full "
       />
       <Mascot className="mx-auto my-5" />
       <Link href="/dashboard" className="btn btn-primary btn-block">
