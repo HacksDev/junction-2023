@@ -1,12 +1,13 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Calendar, Achievements, Chart, LatestEvents } from "@/components/Dashboard";
+import { Layout } from "@/components/Layout";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+export default function Dashboard() {
   return (
-    <div>
-        здесь будет календарь с возможностью заполнения
-    </div>
+    <Layout containerClassName="grid gap-y-3">
+      <Calendar navCard />
+      <Chart />
+      <Achievements />
+      <LatestEvents />
+    </Layout>
   );
 }
