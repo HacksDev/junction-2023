@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
-  return (
-    <div>
-        здесь можно заполнить анкету и получить ссылку для друзей
-        анекта со степером
-    </div>
-=======
 import { Calendar, Achievements, Chart, LatestEvents } from "@/components/Dashboard";
 import { Layout } from "@/components/Layout";
 import Link from "next/link";
@@ -43,6 +30,5 @@ export default function Profile() {
         </div>
       </div>
     </Layout>
->>>>>>> main
   );
 }
