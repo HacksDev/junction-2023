@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Mascot } from "@/components/Mascot";
 import Link from "next/link";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 
 const questions: Array<{
   title: string;
@@ -30,6 +30,8 @@ const questions: Array<{
 ];
 
 export default function Questionnaire() {
+  const [checked, setChecked] = useState(false);
+
   const handleShareClick = useCallback(() => {
     try {
       if (navigator.share) {
@@ -85,7 +87,7 @@ export default function Questionnaire() {
 
       <div className="form-control py-2">
         <label className="cursor-pointer label">
-          <input type="checkbox" checked className="checkbox" />
+          <input type="checkbox" checked={checked} onChange={() => setChecked((prev) => !prev)} className="checkbox" />
           <span className="label-text pl-2 font-medium leading-none">
             I want to share this information with my loved ones
           </span>
