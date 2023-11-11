@@ -5,10 +5,15 @@ import { useRouter } from "../../../../../node_modules/next/router";
 import { useCalendar } from "./CalendarProvider";
 
 export const formatDate = (date: Date): string => {
-  const day = date.getDate();
-  const month = new Intl.DateTimeFormat("en-US", { month: "long" }).format(date);
+  console.log("date as Date", date);
+  if (date === null) {
+    return "";
+  } else {
+    const day = date.getDate();
+    const month = new Intl.DateTimeFormat("en-US", { month: "long" }).format(date);
 
-  return `${day} ${month}`;
+    return `${day} ${month}`;
+  }
 };
 
 export default function EditCalendar() {
@@ -19,7 +24,7 @@ export default function EditCalendar() {
   const router = useRouter();
   const { selectedDate } = router.query;
   const parsedDate = selectedDate ? new Date(selectedDate as string) : null;
-
+  console.log("parsedDate", parsedDate);
   const date = formatDate(parsedDate as Date);
 
   const handleDoneClick = () => {
