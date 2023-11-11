@@ -62,7 +62,7 @@ export const data = {
 export function Chart(props: { className?: string }) {
   return (
     <section className={classNames("card", props.className)}>
-      <Line className="card-body" options={options} data={data} />
+      <Line className="card-body" options={options} data={data as any} />
     </section>
   );
 }
