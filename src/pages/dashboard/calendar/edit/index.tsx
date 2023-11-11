@@ -6,28 +6,26 @@ import { useCalendar } from "./CalendarProvider";
 
 export const formatDate = (date: Date): string => {
   const day = date.getDate();
-  const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(date);
+  const month = new Intl.DateTimeFormat("en-US", { month: "long" }).format(date);
 
   return `${day} ${month}`;
 };
 
-
 export default function EditCalendar() {
   const { state, dispatch } = useCalendar();
-  const [selectedMedication, setSelectedMedication] = useState('Methotrexate');
-  const [selectedDose, setSelectedDose] = useState('100g');
+  const [selectedMedication, setSelectedMedication] = useState("Methotrexate");
+  const [selectedDose, setSelectedDose] = useState("100g");
 
   const router = useRouter();
   const { selectedDate } = router.query;
   const parsedDate = selectedDate ? new Date(selectedDate as string) : null;
 
-
   const date = formatDate(parsedDate as Date);
 
   const handleDoneClick = () => {
-    dispatch({ type: 'ADD_MEDICATION', payload: selectedMedication });
-    dispatch({ type: 'ADD_DOSE', payload: selectedDose });
-    dispatch({ type: 'ADD_DATE', payload: date });
+    dispatch({ type: "ADD_MEDICATION", payload: selectedMedication });
+    dispatch({ type: "ADD_DOSE", payload: selectedDose });
+    dispatch({ type: "ADD_DATE", payload: date });
   };
 
   return (
@@ -40,14 +38,15 @@ export default function EditCalendar() {
       </p>
 
       <div className="grid gap-y-4">
-
         <div className="form-control w-full max-w-xs">
           <label className="label">
             <span className="label-text-alt">Add medication</span>
           </label>
-          <select className="select select-bordered"
-                  value={selectedMedication}
-                  onChange={(e) => setSelectedMedication(e.target.value)}>
+          <select
+            className="select select-bordered"
+            value={selectedMedication}
+            onChange={(e) => setSelectedMedication(e.target.value)}
+          >
             <option>Methotrexate</option>
             <option>Ibuprofen</option>
           </select>
@@ -57,16 +56,17 @@ export default function EditCalendar() {
           <label className="label">
             <span className="label-text-alt">Dose</span>
           </label>
-          <select className="select select-bordered"
-                  value={selectedDose}
-                  onChange={(e) => setSelectedDose(e.target.value)}>
+          <select
+            className="select select-bordered"
+            value={selectedDose}
+            onChange={(e) => setSelectedDose(e.target.value)}
+          >
             <option>100g</option>
             <option>200g</option>
             <option>300g</option>
             <option>400g</option>
           </select>
         </div>
-
       </div>
 
       <div className="grid gap-y-2 mt-6">
