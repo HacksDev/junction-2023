@@ -11,7 +11,7 @@ const Message = (props: { message: MessageData }) => {
             <img src={message.userMessage === true ? "images/portrait.jpg" : "images/red_raccoon_box1.jpg"} />
           </div>
         </div>
-        <div className="chat-header">Vasya</div>
+        <div className="chat-header">{message.userMessage === true ? "You" : "Healther"}</div>
         <div
           className={`chat-bubble ${message.userMessage === true ? "chat-bubble-secondary" : "chat-bubble-primary"}`}
         >
