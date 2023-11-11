@@ -62,7 +62,7 @@ export const data: ChartData<"line"> = {
 
 export function Chart(props: { className?: string }) {
   return (
-    <section className={classNames("card", props.className)}>
+    <section className={classNames("card bg-white", props.className)}>
       <Line className="card-body" options={options} data={data} />
     </section>
   );
