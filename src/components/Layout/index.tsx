@@ -91,7 +91,7 @@ export function Layout(props: PropsWithChildren<{ containerClassName?: string }>
         </div>
       </header>
 
-      <main className={classNames("w-full h-full max-h-full p-2", props.containerClassName)}>
+      <main className={classNames("p-2 bg-[var(--background)]", props.containerClassName)}>
         {props.children}
         <div className="h-16" />
       </main>

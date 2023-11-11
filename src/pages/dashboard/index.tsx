@@ -1,4 +1,5 @@
 import { Calendar, Achievements, Chart, LatestEvents } from "@/components/Dashboard";
+import { Scoring } from "@/components/Dashboard/Scoring";
 import { Layout } from "@/components/Layout";
 
 export default function Dashboard() {
@@ -7,7 +8,7 @@ export default function Dashboard() {
       <Calendar navCard />
       <Chart />
       <Achievements />
-      <LatestEvents />
+      <Scoring />
     </Layout>
   );
 }

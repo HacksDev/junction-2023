@@ -23,8 +23,8 @@ function AwardIcon() {
           y2="58.6668"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1C877" />
-          <stop offset="1" stop-color="#FFA800" />
+          <stop stopColor="#F1C877" />
+          <stop offset="1" stopColor="#FFA800" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_21_25328"
