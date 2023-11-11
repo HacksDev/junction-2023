@@ -11,7 +11,12 @@ export type MessageData = {
 };
 
 export default function Messages() {
-  const [messages, setMessages] = useState<MessageData[]>([]);
+  const [messages, setMessages] = useState<MessageData[]>([
+    {
+      userMessage: false,
+      text: "Hello! You can write somebody anonimously for support him in his life. Reciever will see only your name and city. Write something in chat and i will resend your message to somebody who needs it!",
+    },
+  ]);
   return (
     <Layout containerClassName="px-4 py-0">
       <div>
