@@ -21,6 +21,7 @@ const config: Config = {
           primary: "#FF9784",
           secondary: "#00DAD6",
           "base-100": "#ffffff",
+          warning: "#fbbd23",
           error: "#D2523B",
           "--btn-text-case": "none",
           "--padding-card": "1rem",
@@ -28,6 +29,6 @@ const config: Config = {
       },
     ],
   },
-  plugins: [require("daisyui"), require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  plugins: [require("daisyui"), require("@tailwindcss/typography")],
 };
 export default config;

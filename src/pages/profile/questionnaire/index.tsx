@@ -2,6 +2,8 @@ import { Layout } from "@/components/Layout";
 import { Mascot } from "@/components/Mascot";
 import Link from "next/link";
 
+import { useState } from "react";
+
 const questions: Array<{
   title: string;
   value: string;
@@ -29,6 +31,8 @@ const questions: Array<{
 ];
 
 export default function Questionnaire() {
+  const [checked, setChecked] = useState(false);
+
   return (
     <Layout containerClassName="px-4 pb-5">
       <div className="flex items-center justify-between">
@@ -67,7 +71,7 @@ export default function Questionnaire() {
 
       <div className="form-control py-2">
         <label className="cursor-pointer label">
-          <input type="checkbox" checked className="checkbox" />
+          <input type="checkbox" checked={checked} onChange={() => setChecked((prev) => !prev)} className="checkbox" />
           <span className="label-text pl-2 font-medium leading-none">
             I want to share this information with my loved ones
           </span>

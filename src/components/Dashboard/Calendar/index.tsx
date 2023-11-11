@@ -12,7 +12,10 @@ export function Calendar(props: { className?: string; navCard?: boolean }) {
 
   return (
     <section className={classNames("card bg-white relative", props.className)}>
-      <ReactCalendar maxDate={new Date()} onChange={onChange} value={value} className="card-body" />
+      <div className="card-body">
+        <ReactCalendar maxDate={new Date()} onChange={onChange} value={value} />
+        {props.navCard && <button className="btn btn-primary btn-block">Open Calendar</button>}
+      </div>
       {props.navCard && <Link href="/dashboard/calendar" className="absolute inset-0" />}
     </section>
   );

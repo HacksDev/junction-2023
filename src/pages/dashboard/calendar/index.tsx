@@ -1,13 +1,17 @@
 import { Calendar } from "@/components/Dashboard";
-import { Record } from "@/components/Dashboard/Record";
 import { Layout } from "@/components/Layout";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
+const Record = dynamic(() => import("@/components/Dashboard/Record"), {
+  ssr: false,
+});
 
 export default function CalendarEvents() {
   return (
-    <Layout containerClassName="grid gap-y-3">
+    <Layout containerClassName="grid gap-y-3 pb-28">
+      <h1 className="text-xl font-medium my-3 ml-4">Calendar</h1>
       <Calendar />
-      <Record />
       <Record />
       <Record />
       <Record />
