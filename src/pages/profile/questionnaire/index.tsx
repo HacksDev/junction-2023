@@ -47,9 +47,9 @@ export default function Questionnaire() {
           );
         })}
       </div>
-      <button className="btn btn-primary btn-block my-10">
-        <Link href="/profile/article/2f825b9a-371e-425c-91d7-fd51b6d3352c">Generate article for friends</Link>
-      </button>
+      <Link href="/profile/article/2f825b9a-371e-425c-91d7-fd51b6d3352c">
+        <div className="btn btn-primary btn-block my-10">Generate article for friends</div>
+      </Link>
     </Layout>
   );
 }
