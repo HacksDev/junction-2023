@@ -76,7 +76,7 @@ export default function Profile() {
           </span>
         </label>
       </div>
-      <div className="btn btn-primary btn-block">
+      <div className="">
         <button
           className="btn btn-primary btn-block"
           onClick={handleShareClick}
