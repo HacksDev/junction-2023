@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Profile() {
   const [checked, setChecked] = useState(false);
   const buttonStyle = {
-    opacity: checked ? 1 : 0.5,
+    opacity: checked ? 1 : 0.8,
   };
 
   const handleShareClick = useCallback(() => {
@@ -76,7 +76,7 @@ export default function Profile() {
           </span>
         </label>
       </div>
-      <div className="">
+      <div className="btn btn-primary btn-block">
         <button
           className="btn btn-primary btn-block"
           onClick={handleShareClick}
