@@ -7,7 +7,7 @@ export default function Achievements() {
         <div className="card-body">
           <div className="flex flex-direction-column align-self-flex-end">
             <div>
-              <img src="/images/achivement_1.png" style={{ maxHeight: 150, minWidth: 150 }}></img>
+              <img src="/images/achive_1.png" style={{ maxHeight: 150, minWidth: 150 }}></img>
             </div>
             <div className="pl-5">
               <p className="text-md leading-none mb-3">
@@ -25,7 +25,7 @@ export default function Achievements() {
         <div className="card-body">
           <div className="flex flex-direction-column align-self-flex-end">
             <div>
-              <img src="/images/achivement_2.png" style={{ maxHeight: 150, minWidth: 150 }}></img>
+              <img src="/images/achive_2.png" style={{ maxHeight: 150, minWidth: 150 }}></img>
             </div>
             <div className="pl-5">
               <p className="text-md leading-none mb-3">
@@ -44,7 +44,7 @@ export default function Achievements() {
         <div className="card-body">
           <div className="flex flex-direction-column align-self-flex-end">
             <div>
-              <img src="/images/achivement_3.png" style={{ maxHeight: 150, minWidth: 150 }}></img>
+              <img src="/images/achive_3.png" style={{ maxHeight: 150, minWidth: 150 }}></img>
             </div>
             <div className="pl-5">
               <p className="text-md leading-none mb-3">
