@@ -1,5 +1,6 @@
 import { Calendar, Achievements, Chart, LatestEvents } from "@/components/Dashboard";
 import { Layout } from "@/components/Layout";
+import { Mascot } from "@/components/Mascot";
 import Link from "next/link";
 
 export default function Profile() {
@@ -29,6 +30,7 @@ export default function Profile() {
           </Link>
         </div>
       </div>
+      <Mascot className="mx-auto my-5" />
     </Layout>
   );
 }
