@@ -1,14 +1,14 @@
 import React from "react";
 import classNames from "classnames";
 import {
-  Chart as ChartJS,
   CategoryScale,
+  Chart as ChartJS,
+  Legend,
   LinearScale,
-  PointElement,
   LineElement,
+  PointElement,
   Title,
   Tooltip,
-  Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
@@ -22,24 +22,39 @@ export const options = {
     },
     title: { display: false },
   },
+  scales: {
+    y: {
+      display: true,
+      title: {
+        display: true,
+        text: "avg. Dosage",
+      },
+    },
+  },
 };
 
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
+const labels = ["January", "February", "March", "April", "May", "June"];
+const values = [400, 320, 300, 330, 270, 180];
+const values2 = [100, 120, 130, 100, 100, 160];
 
 export const data = {
   labels,
   datasets: [
     {
-      label: "Dataset 1",
-      data: labels.map(() => Math.random() * 100),
-      borderColor: "rgb(255, 99, 132)",
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      cubicInterpolationMode: "monotone",
+      tension: 0.4,
+      label: "Methotrexate (prescription drug)",
+      data: values,
+      borderColor: "rgb(255, 151, 132)",
+      backgroundColor: "rgb(255, 151, 132)",
     },
     {
-      label: "Dataset 2",
-      data: labels.map(() => Math.random() * 100),
-      borderColor: "rgb(53, 162, 235)",
-      backgroundColor: "rgba(53, 162, 235, 0.5)",
+      cubicInterpolationMode: "monotone",
+      tension: 0.4,
+      label: "Ibuprofen",
+      data: values2,
+      borderColor: "rgb(0, 218, 214)",
+      backgroundColor: "rgb(0, 218, 214)",
     },
   ],
 };
