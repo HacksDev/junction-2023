@@ -25,8 +25,8 @@ export default function Achievements() {
                 <strong>Books</strong>
               </p>
               <p className="text-md leading-none mb-3">
-                20% discount on all books from “Living with chronic illness” section. Use until 25.05.2024 Feel free to
-                get other bestsellers on Books4people.com
+                20% discount on all books from “Living with chronic illness” section. Use until 25.05.2024 <br></br>
+                <br></br>Feel free to get other bestsellers on Books4people.com
               </p>
             </div>
           </div>
@@ -43,8 +43,8 @@ export default function Achievements() {
                 <strong>Massage</strong>
               </p>
               <p className="text-md leading-none mb-3">
-                15% discount for the first massage season ticket bought before 23.04.2024. Stay healthy. Be happy!
-                Cowshed salon and spa (cowshed.com)
+                15% discount for the first massage season ticket bought before 23.04.2024. <br></br>
+                <br></br>Stay healthy. Be happy! Cowshed salon and spa (cowshed.com)
               </p>
             </div>
           </div>
@@ -61,8 +61,9 @@ export default function Achievements() {
                 <strong>Yoga</strong>
               </p>
               <p className="text-md leading-none mb-3">
-                Want to join yoga class? Time to buy some equipment! Buy everything you need at Yogamatters.com and get
-                a yoga mat for free! Your promo-code: HEALTHWEALTH
+                Want to join yoga class? Time to buy some equipment! <br></br>
+                <br></br>Buy everything you need at Yogamatters.com and get a yoga mat for free! Your promo-code:
+                HEALTHWEALTH
               </p>
             </div>
           </div>
