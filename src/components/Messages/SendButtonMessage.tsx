@@ -26,7 +26,7 @@ const SendButtonMessage = (props: { onNewMessage: (message: String, userMessage:
     },
     {
       text: "Good, i know a movie just for you. It is called “Garfield”.",
-      buttons_text: ["Good, I will see it", "Brr, it is boring!"],
+      buttons_text: ["Good, I will watch it", "Brr, it is boring!"],
     },
   ];
 

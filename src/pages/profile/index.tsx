@@ -16,8 +16,8 @@ export default function Profile() {
           </div>
         </div>
         <div className="mt-16 text-black flex flex-col items-center">
-          <h4 className="text-xl font-bold">Menelaos Onuphrius</h4>
-          <p className="text-base font-normal">Chronic Back Pain</p>
+          <h4 className="text-xl font-bold">Mark Painbackov</h4>
+          <p className="text-base font-normal">Ankylosing spondylitis</p>
         </div>
 
         <div className="grid mt-4 gap-y-4 w-full">

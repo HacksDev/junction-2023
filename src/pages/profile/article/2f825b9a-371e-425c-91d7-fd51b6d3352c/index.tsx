@@ -9,7 +9,7 @@ export default function Profile() {
         navigator
           .share({
             title: "HealthPace",
-            text: "HelthPace writes article about my chronical pain. I want to share it with you",
+            text: "HealthPace writes article about my chronical pain. I want to share it with you",
             url: "https://junction2023.hacksdev.site/profile/article/2f825b9a-371e-425c-91d7-fd51b6d3352c",
           })
           .then(() => console.log("Successful share"))
