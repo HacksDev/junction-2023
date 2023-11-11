@@ -14,7 +14,7 @@ const ChatBox = (props: { messages: MessageData[] }) => {
   }, [props.messages]); // Trigger the effect whenever messages change
 
   return (
-    <div className="containerWrap pb-32" style={{ backgroundColor: "#EDF8FA" }} ref={chatBoxRef}>
+    <div className="containerWrap pb-52" style={{ backgroundColor: "#EDF8FA" }} ref={chatBoxRef}>
       {props.messages.map((message: MessageData, ind: number) => (
         <Message key={ind} message={message} />
       ))}

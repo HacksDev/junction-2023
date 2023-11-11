@@ -2,7 +2,6 @@ import { MessageData } from "@/pages/messages";
 
 const Message = (props: { message: MessageData }) => {
   const message = props.message;
-  console.log(message);
   return (
     <div>
       <div className={`chat ${message.userMessage === true ? "chat-end" : "chat-start"}`}>
