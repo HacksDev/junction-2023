@@ -14,7 +14,7 @@ export default function Messages() {
   const [messages, setMessages] = useState<MessageData[]>([
     {
       userMessage: false,
-      text: "Hello! You can write somebody anonimously for support him in his life. Reciever will see only your name and city. Write something in chat and i will resend your message to somebody who needs it!",
+      text: "Now is the perfect time to write a couple of nice and encouraging words for a person who copes with similar health difficulties🤗.\nToday your support will go to Alexis, Ottawa (asthma).\nIf you don’t feel like doing it, just press ‘Skip’.",
     },
   ]);
   return (
