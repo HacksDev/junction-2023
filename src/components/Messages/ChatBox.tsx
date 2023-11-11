@@ -6,7 +6,7 @@ const ChatBox = (props: { messages: MessageData[] }) => {
   console.log(props);
 
   return (
-    <div className="containerWrap mb-80">
+    <div className="containerWrap pb-32" style={{backgroundColor: "secondary"}}>
       {props.messages.map((message: MessageData, ind: number) => (
         <Message key={ind} message={message} />
       ))}

@@ -18,7 +18,7 @@ export default function Messages() {
     },
   ]);
   return (
-    <Layout containerClassName="px-4 py-0">
+    <Layout containerClassName="py-0">
       <div>
         <ChatBox messages={messages} />
         <SendMessage

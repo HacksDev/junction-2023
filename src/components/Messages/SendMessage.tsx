@@ -26,7 +26,7 @@ const SendMessage = (props: { onNewMessage: (message: String, userMessage: Boole
   };
 
   return (
-    <div className="fixed bottom-0 w-full mb-20 pr-50 bg-white ">
+    <div className="fixed bottom-0 w-full pt-3 pb-20 pr-50" style={{backgroundColor: "secondary"}}>
       <form onSubmit={handleSendMessage} className="px-2 containerWrap flex">
         <input
           value={value}
