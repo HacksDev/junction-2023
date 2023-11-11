@@ -15,7 +15,17 @@ const config: Config = {
     },
   },
   daisyui: {
-    themes: ["cupcake"],
+    themes: [
+      {
+        mytheme: {
+          primary: "#FF9784",
+          secondary: "#00DAD6",
+          "base-100": "#ffffff",
+          "--btn-text-case": "none",
+          "--padding-card": "1rem",
+        },
+      },
+    ],
   },
   plugins: [require("daisyui"), require("@tailwindcss/typography")],
 };
