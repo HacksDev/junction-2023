@@ -4,7 +4,7 @@ import { useState } from "react";
 const SendMessage = (props: { onNewMessage: (message: String, userMessage: Boolean) => void }) => {
   const [value, setValue] = useState("");
   const [number, setNumber] = useState<number>(0);
-  const handleSendMessage = async (e) => {
+  const handleSendMessage = async (e: any) => {
     e.preventDefault();
     console.log(value);
     props.onNewMessage(value, true);
