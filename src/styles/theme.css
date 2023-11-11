@@ -13,7 +13,7 @@
 }
 
 [data-theme="mytheme"] .card {
-  @apply bg-white shadow-xl
+  @apply shadow-xl
 }
 
 [data-theme="mytheme"] .react-calendar__month-view__weekdays__weekday {
