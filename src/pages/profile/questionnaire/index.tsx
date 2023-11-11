@@ -48,7 +48,7 @@ export default function Questionnaire() {
       />
 
       <div className="flex items-center mb-5">
-        <input type="checkbox" checked="checked" className="checkbox mr-3" />
+        <input type="checkbox" className="checkbox mr-3" />
         <p className="text-md inline-block leading-none">I want to share this information with my loved ones</p>
       </div>
 
