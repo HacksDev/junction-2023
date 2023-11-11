@@ -9,12 +9,15 @@ const SendMessage = (props: { onNewMessage: (message: String, userMessage: Boole
     console.log(value);
     props.onNewMessage(value, true);
     const anwer_messages: String[] = [
-      'Thank you for your message! I will resend it to somebody. Vasya from Zaltsburg wrote message for you too: "Have a nice day!"',
-      'Mark from London wrote you: "Look at yourself, you are wonderful!"',
-      'Angella wrote message to you from Australia: "I like you!"',
+      'Thank you for your warm wishes! You just made someone a bit happier. Michael from Salzburg wrote a message to you too: "Have a nice day! Smile more!',
+      'Mark from London wanted to tell you: "Look at yourself, you are wonderful! You can cope with all the difficulties"',
+      'There is also one message from Angela, Australia: "I believe in you! Never stop dreaming big."',
     ];
     if (number >= anwer_messages.length) {
-      props.onNewMessage("You don't have new messages yet, but you can still write some message for somebody!", false);
+      props.onNewMessage(
+        "You don't have new messages yet, but you can still write some kind words to somebody!",
+        false,
+      );
     } else {
       props.onNewMessage(anwer_messages[number], false);
       setNumber(number + 1);
