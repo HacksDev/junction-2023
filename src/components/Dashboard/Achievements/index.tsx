@@ -45,7 +45,7 @@ function AwardIcon() {
 export function Achievements(props: { className?: string }) {
   return (
     <section className={classNames("card relative", props.className)}>
-      {/* <Link href="/dashboard/achievements" className="absolute inset-0" /> */}
+      <Link href="/dashboard/achievements" className="absolute inset-0" />
       <div className="card-body">
         <div className="flex items-center justify-between">
           <h2 className="font-medium">New reward!</h2>

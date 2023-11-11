@@ -56,7 +56,3 @@
 [data-theme="mytheme"] .react-calendar__navigation__next-button {
   @apply order-3 text-primary text-4xl w-10
 }
-
-[data-theme="mytheme"] .react-calendar__month-view__days {
-  @apply !grid !grid-rows-6 grid-cols-7
-}
