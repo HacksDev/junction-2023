@@ -12,7 +12,7 @@ export default function Profile() {
             className="absolute flex h-32 w-full justify-center rounded-xl bg-cover"
           />
           <div className="absolute -bottom-12 flex h-[87px] w-[87px] items-center justify-center rounded-full border-[4px] border-white bg-pink-400 dark:!border-navy-700">
-            <img className="h-full w-full rounded-full" src="/images/portrait.jpg" alt="" />
+            <img className="h-full w-full rounded-full" src="/images/portrait.png" alt="" />
           </div>
         </div>
         <div className="mt-16 text-black flex flex-col items-center">
