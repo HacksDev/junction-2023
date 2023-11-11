@@ -76,13 +76,8 @@ export default function Profile() {
           </span>
         </label>
       </div>
-      <div className="">
-        <button
-          className="btn btn-primary btn-block"
-          onClick={handleShareClick}
-          disabled={!checked}
-          style={buttonStyle}
-        >
+      <div className="btn btn-primary btn-block" style={buttonStyle}>
+        <button className="" onClick={handleShareClick} disabled={!checked}>
           Share article with friends
         </button>
       </div>
