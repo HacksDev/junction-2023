@@ -15,7 +15,9 @@ export function Achievements(props: { className?: string }) {
             <img src="/images/achivement_1.png" style={{ maxHeight: 100, minWidth: 100 }}></img>
           </div>
           <div className="pl-5">
-            <p className="text-md leading-none mb-3">Brave tester</p>
+            <p className="text-md leading-none mb-3">
+              <strong>Brave tester</strong>
+            </p>
 
             <p className="w-max-[80%] text-[#9A9A9A] text-sm leading-none">
               You&apos;ve tried 3 new activities this week. Well done! Keep it up, you got it
