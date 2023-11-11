@@ -8,7 +8,7 @@ export default function Achievements() {
           <div className="flex flex-direction-column align-self-flex-end ">
             <div>
               You made a huge progress so far! Contact your insurance company and get a benefit - month of free swimming
-              lessons.
+              lessons
             </div>
           </div>
         </div>
