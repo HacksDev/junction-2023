@@ -24,10 +24,12 @@ function tileContent({ date, view }: DateParameterType) {
     if (view === "month") {
       const dddd = formatDate(date);
       const count: number = storedDates.dates.filter((val: string) => val === dddd).length;
-      return <div style={{ position: "absolute"}}>
-        <br/>
-        {"•".repeat(count)}
-      </div>;
+      return (
+        <div style={{ position: "absolute" }}>
+          <br />
+          {"•".repeat(count)}
+        </div>
+      );
     }
   }
 }
