@@ -54,11 +54,13 @@ export function Achievements(props: { className?: string }) {
         <div className="grid grid-cols-[1fr_auto]">
           <AwardIcon />
           <div>
-            <p className="text-md leading-none mb-3">Login or register to get full access to our service.</p>
+            <p className="text-md leading-none mb-3">Brave tester</p>
 
             <p className="w-max-[80%] text-[#9A9A9A] text-sm leading-none">
-              You need to contact your doctor or insurance company to receive a special code. Your unique code should be
-              entered below.
+              You&apos;ve tried 3 new activities this week. Well done! Keep it up, you got it
+            </p>
+            <p className="w-max-[80%] text-[#9A9A9A] text-sm leading-none">
+              Don&apos;t forget to add favorite activities to your calendar!
             </p>
           </div>
         </div>

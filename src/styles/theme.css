@@ -28,11 +28,19 @@
   @apply aspect-square flex justify-center items-center
 }
 
+[data-theme="mytheme"] .react-calendar__tile:disabled {
+  @apply opacity-30
+}
+
 [data-theme="mytheme"] .react-calendar__navigation__arrow.react-calendar__navigation__next2-button, .react-calendar__navigation__arrow.react-calendar__navigation__prev2-button {
   @apply hidden
 }
 
 [data-theme="mytheme"] .react-calendar__tile--now {
+  @apply text-primary
+} 
+
+[data-theme="mytheme"] .react-calendar__tile--active {
   @apply bg-primary rounded-full text-white
 } 
 
